@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// login state
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
+  // get user information
   const { email, password } = user;
+  // get user info on change
   const onChange = (e) => {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
     });
   };
+  // submit the form
   const onSubmit = (e) => {
     e.preventDefault();
   };
+  
   return (
     <div className="form-usuario">
       <div className="contenedor-form sombra-dark">

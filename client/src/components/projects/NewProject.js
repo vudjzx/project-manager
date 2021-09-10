@@ -8,13 +8,17 @@ const NewProject = () => {
     setProject({ ...project, [e.target.name]: e.target.value });
   };
   const { name } = project;
+
+  const onSubmitProject = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <button type="button" className="btn btn-block btn-primario">
         New Project
       </button>
 
-      <form className="formulario-nuevo-proyecto">
+      <form onSubmit={onSubmitProject} className="formulario-nuevo-proyecto">
         <input
           type="text"
           className="input-text"
